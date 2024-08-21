@@ -16,6 +16,8 @@ nav {
    margin-bottom: 20px;
     display: flex;
     padding: 10px;
+    border: double;
+    border-radius: 30px;
     
 }
 h1 {
@@ -41,6 +43,8 @@ a {
 main {
     background: rgb(239, 200, 231);
     display: flex;
+    border: double;
+    border-radius: 30px;
 }
 .sidebar {
     margin-right: 25px;
@@ -56,9 +60,9 @@ main {
 
 /* portfolio styles */
 #interests {
-    border: 5px silver ridge;
+    border: 5px rgb(233, 225, 225) ridge;
     padding: 8%;
 }
-h2, h3 {
+h2, h3, h4 {
     margin: 0px;
 }
