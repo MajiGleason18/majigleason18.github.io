@@ -69,6 +69,7 @@
 
 			var positionX = 0;
 			var points = 0;
+			var speed = 10; 
 
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -77,28 +78,16 @@
 			*/
 			function update() {
 				/*My code to increase position by 10*/
-				positionX = positionX + 10; // positionX = 10
-				moveBoxTo(positionX);
-
-				// Frame 2
-				positionX = 10 + 10; // positionX = 20
-				moveBoxTo(positionX);
-
-				// The Box is Clicked
-				positionX = 0; // positionX = 0
-
-				// back to update...
-				// Frame 3
-				positionX = 0 + 10; // positionX = 10
-				moveBoxTo(positionX);
-
-				// Frame 4
-				positionX = 10 + 10; // positionX = 20
+				// Frame 1
+				positionX = positionX + speed; // positionX = 10
+				var boardWidth = 1300
+				if (positionX > boardWidth){
+					positionX = positionX - speed 
+				}
 				moveBoxTo(positionX);
 
 
-
-							};
+											};
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
@@ -107,8 +96,10 @@
 			*/
 			function handleBoxClick() {
 				positionX = 0;
-				positionX = positionX + 1 
+				points = points + 1;
+				speed = speed + 3; 
 				changeBoxText(points);
+
 			};
 
 
