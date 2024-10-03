@@ -82,7 +82,10 @@
 				positionX = positionX + speed; // positionX = 10
 				var boardWidth = 1300
 				if (positionX > boardWidth){
-					positionX = positionX - speed 
+					speed = -speed;
+				}
+				if (positionX < 0){
+					speed = -speed;
 				}
 				moveBoxTo(positionX);
 
@@ -96,8 +99,8 @@
 			*/
 			function handleBoxClick() {
 				positionX = 0;
-				points = points + 1;
-				speed = speed + 3; 
+				points = points + 1; 
+				speed = speed + 3;
 				changeBoxText(points);
 
 			};
