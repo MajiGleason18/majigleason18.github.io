@@ -70,6 +70,10 @@
 			var positionX = 0;
 			var points = 0;
 			var speed = 10; 
+			var positionY;
+            var speedY;
+			var boardHeight = jQuery(window).height(20);
+			var randNum = Math.random() * 100;
 
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -87,7 +91,11 @@
 				if (positionX < 0){
 					speed = -speed;
 				}
-				moveBoxTo(positionX);
+				moveBoxTo(positionX, positionY);
+				function moveBoxTo(newPositionX, newPositionY) {
+                box.css("left", newPositionX);
+                box.css("top", newPositionY);
+                }
 
 
 											};
